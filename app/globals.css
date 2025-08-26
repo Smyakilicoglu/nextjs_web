@@ -1,0 +1,280 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap');
+
+@import "tailwindcss";
+
+@import "tw-animate-css";
+
+@theme {
+  --color-brand: #de691f;
+  --color-primary: rgb(249, 243, 237);
+
+  --font-qwitcher-regular: "Qwitcher Grypen", cursive;
+  --font-qwitcher-bold: "Qwitcher Grypen", cursive;
+}
+
+
+
+/* useRevealer için gerekli stiller */
+.revealer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  pointer-events: none;
+  transform-origin: top;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+}
+
+.musterilerimiz {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+
+
+
+/* Kart animasyonu ve stacking için gerekli stiller */
+.musterilerimiz .col {
+  position: relative;
+  padding-top: 2.5rem;
+}
+
+
+body {
+  font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  margin-bottom: -3.5rem;
+  z-index: auto;
+  will-change: transform;
+  transition: box-shadow 0.2s;
+  height: 280px; /* sabit yükseklik */
+}
+
+
+
+.card-inner {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: inherit;
+}
+
+.card-content {
+  flex: 3;
+}
+.card-img {
+  flex: 1;
+  aspect-ratio: 16/9;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+
+
+
+@media (max-width: 900px) {
+  .card-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    min-height: 120px;
+    height: auto;
+  }
+  .card {
+    height: auto;
+    position: static;
+    margin-bottom: -2rem;
+  }
+  .card-img {
+    width: 100%;
+    height: 15rem;
+  }
+  .card-content p {
+    font-size: 1rem;
+  }
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: -0.05rem;
+  line-height: 1;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 1em;
+}
+
+body {
+  font-family: "Lay Grotesk - Trial", sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero .hero-text {
+  width: 50%;
+  text-align: center;
+}
+
+.foto {
+  display: block;
+  margin: 0 auto 2rem;
+  transform: scale(0.8); 
+  opacity: 0;            
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  padding: 1.5rem 2rem;
+}
+
+
+.hizmetler h2{
+  display: flex;
+  justify-content: center;
+
+}
+
+.hizmetler p{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.projeler-ana {
+  display: flex;
+  flex-direction: column;          
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.kartlar-container {
+  position: relative;
+  width: min(90vw, 700px);           
+  aspect-ratio: 16 / 9;              
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.kartlar {
+  position: absolute;
+  inset: 0;                        
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.kartlar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             
+}
+
+.tag {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  z-index: 1;
+}
+
+.tag p {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+
