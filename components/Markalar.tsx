@@ -56,7 +56,7 @@ export default function Markalar() {
           { src: "/tarvina_logo1.png", alt: "Tarvina" },
           { src: "/tarvip_logo1.png", alt: "Tarvip" },
           { src: "/balerion_logo1.png", alt: "Balerion" },
-          { src: "/tahsilate_logo1.png", alt: "Tahsilate" },
+          { src: "/tahsilatE_logo1.png", alt: "Tahsilate" },
         ].map((it) => (
           <div
             key={it.alt}
